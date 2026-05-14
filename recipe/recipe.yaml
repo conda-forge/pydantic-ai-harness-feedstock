@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydantic-ai-slim >=1.80.0
+    - pydantic-ai-slim >=1.95.1
 
 tests:
   - python:
