@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.0"
+  version: "0.9.0"
 
 package:
   name: pydantic-ai-harness
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ version }}.tar.gz
-  sha256: 19618493243c830d27cf506b766ebb41eace38bc97f8cd0555c749e93cdf9052
+  sha256: 244b932ebd543497b2ae7fca695b5f01c44a0b5897fa100c31816617ae0f6e54
 
 build:
   number: 0
