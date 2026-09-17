@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.28.0"
+  version: "0.31.0"
 
 package:
   name: pydantic-ai-harness
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ version }}.tar.gz
-  sha256: ebf9d3fb2e5e5363e46373bc9c5b482f55652b43e44e0897d6a7747ba2170121
+  sha256: a8763f3bfa62a2c261c4c753270cd14ae774e7941a2e7184da3b776ac46db2be
 
 build:
   number: 0
@@ -24,14 +24,18 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydantic-ai-slim >=1.95.1
+    - genai-prices >=0.0.71
+    - httpx >=0.28.1
+    - pydantic-ai-slim >=2.40.0
 
 tests:
   - python:
       imports:
         - pydantic_ai_harness
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: The batteries for your Pydantic AI agent
