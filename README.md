@@ -3,13 +3,13 @@ About pydantic-ai-harness-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydantic-ai-harness-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/pydantic/pydantic-ai-harness
+Home: https://pydantic.dev/docs/ai/harness/
 
 Package license: MIT
 
-Summary: The batteries for your Pydantic AI agent
+Summary: The official capability library and harness for Pydantic AI
 
-Development: https://github.com/pydantic/pydantic-ai-harness
+Development: https://github.com/pydantic/pydantic-ai
 
 Current build status
 ====================
