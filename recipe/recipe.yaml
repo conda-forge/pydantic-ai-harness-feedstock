@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.31.0"
+  version: "0.54.0"
 
 package:
   name: pydantic-ai-harness
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ version }}.tar.gz
-  sha256: a8763f3bfa62a2c261c4c753270cd14ae774e7941a2e7184da3b776ac46db2be
+  sha256: f17c824544e29ae688d362f3479c45eb196f3094ab463e035a59f273f34aad63
 
 build:
   number: 0
@@ -26,7 +26,8 @@ requirements:
     - python >=${{ python_min }}
     - genai-prices >=0.0.71
     - httpx >=0.28.1
-    - pydantic-ai-slim >=2.40.0
+    - json-repair >=0.58.0
+    - pydantic-ai-slim ==2.54.0
 
 tests:
   - python:
@@ -38,11 +39,11 @@ tests:
         - "*"
 
 about:
-  summary: The batteries for your Pydantic AI agent
+  summary: The official capability library and harness for Pydantic AI
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/pydantic/pydantic-ai-harness
-  repository: https://github.com/pydantic/pydantic-ai-harness
+  homepage: https://pydantic.dev/docs/ai/harness/
+  repository: https://github.com/pydantic/pydantic-ai
 
 extra:
   recipe-maintainers:
