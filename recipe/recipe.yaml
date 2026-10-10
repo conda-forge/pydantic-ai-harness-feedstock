@@ -2,6 +2,8 @@ schema_version: 1
 
 context:
   version: "0.55.0"
+  # upstream pins pydantic-ai-slim to 2.<minor>.<patch> of this package
+  slim_version: 2.${{ (version | split("."))[1] }}.${{ (version | split("."))[2] }}
 
 package:
   name: pydantic-ai-harness
@@ -27,7 +29,7 @@ requirements:
     - genai-prices >=0.0.71
     - httpx >=0.28.1
     - json-repair >=0.58.0
-    - pydantic-ai-slim ==2.54.0
+    - pydantic-ai-slim ==${{ slim_version }}
 
 tests:
   - python:
