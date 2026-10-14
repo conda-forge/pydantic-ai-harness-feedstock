@@ -1,7 +1,9 @@
 schema_version: 1
 
 context:
-  version: "0.54.0"
+  version: "0.55.0"
+  # upstream pins pydantic-ai-slim to 2.<minor>.<patch> of this package
+  slim_version: 2.${{ (version | split("."))[1] }}.${{ (version | split("."))[2] }}
 
 package:
   name: pydantic-ai-harness
@@ -9,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ version }}.tar.gz
-  sha256: f17c824544e29ae688d362f3479c45eb196f3094ab463e035a59f273f34aad63
+  sha256: f360d5b1aa0d285e304bc3f4fc6d816ed47fdbfc0b1e0dbf4c34cc87b6f6547a
 
 build:
   number: 0
@@ -27,7 +29,7 @@ requirements:
     - genai-prices >=0.0.71
     - httpx >=0.28.1
     - json-repair >=0.58.0
-    - pydantic-ai-slim ==2.54.0
+    - pydantic-ai-slim ==${{ slim_version }}
 
 tests:
   - python:
